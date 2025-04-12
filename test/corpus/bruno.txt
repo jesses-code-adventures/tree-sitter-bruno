@@ -29,3 +29,47 @@ meta {
 		)
 	)
 )
+
+================
+Params Tag
+================
+
+params:query {
+	id: asdf
+}
+
+---
+
+(source_file
+	tag: (query_params
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
+
+================
+Path Params Tag
+================
+
+params:path {
+	id: asdf
+}
+
+---
+
+(source_file
+	tag: (path_params
+		(keyword)
+		(dictionary
+			(dictionary_pair
+				(key)
+				(value)
+			)
+		)
+	)
+)
