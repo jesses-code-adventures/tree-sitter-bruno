@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "bruno",
   "rules": {
     "source_file": {
@@ -20,6 +21,14 @@
             {
               "type": "SYMBOL",
               "name": "query"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "query_params"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "path_params"
             },
             {
               "type": "SYMBOL",
@@ -138,6 +147,42 @@
           "content": {
             "type": "STRING",
             "value": "query"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "query_params": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "params:query"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "path_params": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "params:path"
           },
           "named": true,
           "value": "keyword"
@@ -861,5 +906,6 @@
     }
   ],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }
