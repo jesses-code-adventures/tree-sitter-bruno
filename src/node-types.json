@@ -542,7 +542,7 @@
     }
   },
   {
-    "type": "path_params",
+    "type": "params",
     "named": true,
     "fields": {},
     "children": {
@@ -562,25 +562,6 @@
   },
   {
     "type": "query",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "dictionary",
-          "named": true
-        },
-        {
-          "type": "keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "query_params",
     "named": true,
     "fields": {},
     "children": {
@@ -689,15 +670,11 @@
             "named": true
           },
           {
-            "type": "path_params",
+            "type": "params",
             "named": true
           },
           {
             "type": "query",
-            "named": true
-          },
-          {
-            "type": "query_params",
             "named": true
           },
           {
@@ -903,6 +880,14 @@
   },
   {
     "type": "options",
+    "named": false
+  },
+  {
+    "type": "params:path",
+    "named": false
+  },
+  {
+    "type": "params:query",
     "named": false
   },
   {

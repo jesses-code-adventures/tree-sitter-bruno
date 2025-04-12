@@ -31,7 +31,7 @@ meta {
 )
 
 ================
-Params Tag
+Query Params Tag
 ================
 
 params:query {
@@ -41,7 +41,7 @@ params:query {
 ---
 
 (source_file
-	tag: (query_params
+	tag: (params
 		(keyword)
 		(dictionary
 			(dictionary_pair
@@ -63,7 +63,7 @@ params:path {
 ---
 
 (source_file
-	tag: (path_params
+	tag: (params
 		(keyword)
 		(dictionary
 			(dictionary_pair

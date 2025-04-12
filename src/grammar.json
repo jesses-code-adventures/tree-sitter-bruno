@@ -24,11 +24,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "query_params"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "path_params"
+              "name": "params"
             },
             {
               "type": "SYMBOL",
@@ -139,6 +135,37 @@
         }
       ]
     },
+    "params": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "params_variant"
+          },
+          "named": true,
+          "value": "keyword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dictionary"
+        }
+      ]
+    },
+    "params_variant": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "params:query"
+        },
+        {
+          "type": "STRING",
+          "value": "params:path"
+        }
+      ]
+    },
     "query": {
       "type": "SEQ",
       "members": [
@@ -147,42 +174,6 @@
           "content": {
             "type": "STRING",
             "value": "query"
-          },
-          "named": true,
-          "value": "keyword"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "dictionary"
-        }
-      ]
-    },
-    "query_params": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "params:query"
-          },
-          "named": true,
-          "value": "keyword"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "dictionary"
-        }
-      ]
-    },
-    "path_params": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "params:path"
           },
           "named": true,
           "value": "keyword"
